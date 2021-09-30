@@ -83,3 +83,10 @@ Este desafio foi baseado neste outro desafio: https://github.com/lschallenges/da
 ---
 
 Boa sorte!
+
+Dependências:
+Python 3.8.10
+Postgres 12.8
+Django-3.2.7
+Djangorestframework-3.12.4
+
