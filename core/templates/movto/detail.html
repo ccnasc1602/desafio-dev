@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <style>
+        .content {
+            display: flex;
+            margin: auto;
+        }
+
+        .rTable {
+            width: 100%;
+            text-align: center;
+        }
+
+        .thead {
+            background: black;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .th, .td {
+            padding: 7px 0;
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Detalhe Tipos de Movimento</title>
+  </head>
+  <body>
+    <div class="content">
+        <table class="rTable">
+            <thead>
+                <tr>
+                    <th scope="col" style="padding: 7px 0">ID</th>
+                    <th scope="col" style="padding: 7px 0">Nome</th>
+                    <th scope="col" style="padding: 7px 0">Natureza</th>
+                    <th scope="col" style="padding: 7px 0">Sinal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 7px 0" data-label="ID"><a href="/core/tipo_movto_id/{{ tipo_movto.id }}/"> {{ tipo_movto.id }} </a></td>
+                    <td style="padding: 7px 0" data-label="Nome"> {{ tipo_movto.nome }}</td>
+                    <td style="padding: 7px 0" data-label="Natureza"> {{ tipo_movto.natureza }}</td>
+                    <td style="padding: 7px 0" data-label="Sinal"> {{ tipo_movto.sinal }}</td>
+                    <button type="submit"> Adicionar </button>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </body>
+</html>

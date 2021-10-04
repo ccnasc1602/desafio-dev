@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tipos de Movimentação</title>
+        <style>
+            .rTable {
+                width: 100%; 
+                text-align: center
+            }
+            .rThead {
+                background: black; 
+                font-weight: bold; 
+                color: #fff
+            }
+            caption {
+                background-color: grey; 
+                color: crimson; 
+                text-align: center;
+                border: black;
+            }
+            th, td {
+                padding: 7px 0;
+            }
+            tbody {
+                border-style: 1;
+                border: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content" style="display: flex; margin: auto">
+            <table class="rTable">
+                <div>
+                    <caption class="caption" >Lista de Tipos de Movimentação</caption>
+                </div>
+                <thead class="rThead">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Natureza</th>
+                        <th scope="col">Sinal</th>
+                    </tr>
+    
+                </thead>
+                {% if tipo_movto_list %}
+                {% for tipo_movto in tipo_movto_list %}
+                <tbody>
+                    <tr>
+                        <td data-label="ID"><a href="/core/tipo_movto_id/{{ tipo_movto.id }}/"> {{ tipo_movto.id }} </a></td>
+                        <td data-label="Nome"> {{ tipo_movto.nome }}</td>
+                        <td data-label="Natureza"> {{ tipo_movto.natureza }}</td>
+                        <td data-label="Sinal"> {{ tipo_movto.sinal }}</td>
+                    </tr>
+                </tbody>
+                {% endfor %}
+            {% else %}
+                <p>No types moviment are available.</p>
+            {% endif %}
+                
+            </table>
+        </div>
+        <div>
+            <p></p>
+            <button type="button" style="background-color: green; color: #fff;" onclick="Evento()">Adicionar</button>
+        </div>
+    </body>
+</html>

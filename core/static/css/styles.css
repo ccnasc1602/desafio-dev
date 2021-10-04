@@ -1,0 +1,19 @@
+.content {
+    display: flex;
+    margin: auto;
+}
+
+.rTable {
+    width: 100%;
+    text-align: center;
+}
+
+.thead {
+    background: black;
+    font-weight: bold;
+    color: #fff;
+}
+
+.th, .td {
+    padding: 7px 0;
+}
